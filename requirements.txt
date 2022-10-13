@@ -1,0 +1,7 @@
+streamlit
+numpy 
+streamlit_option_menu
+pickle-mixin
+pillow
+opencv-python
+keras
