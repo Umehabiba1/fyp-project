@@ -5,3 +5,4 @@ pickle-mixin
 pillow
 opencv-python
 keras
+tensorflow
