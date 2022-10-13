@@ -6,3 +6,4 @@ pillow
 opencv-python
 keras
 tensorflow
+cv2
