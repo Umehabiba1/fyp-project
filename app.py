@@ -6,7 +6,7 @@ from PIL import Image, ImageOps
 
 # Modify app name and Icon
 # Config Function 
-st.set_page_config(page_title='CROP DETECTION APP', page_icon='🎇', layout='wide', initial_sidebar_state='auto')
+st.set_page_config(page_title='CROP DETECTION APP', page_icon='🌿', layout='wide', initial_sidebar_state='auto')
 
 # Hide Menu and Footer
 hide_menu_style = """
@@ -19,14 +19,14 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 
 
-st.title("🎇Crop Detection App🎇")
+st.title("Crop Detection App🌿")
 st.markdown('---')
 
 with st.sidebar:
     selected = option_menu(
         menu_title='MY APP',
         options= ['ABOUT APP', 'MEMBERS','DETAIL', 'DETECTION'],
-        icons = ['app-indicator', 'people-fill','arrow-90deg-right', 'star-half'],
+        icons = ['app-indicator', 'people-fill','arrow-90deg-right', 'search'],
         
         menu_icon = 'toggle-on',
         default_index = 0,
@@ -41,7 +41,7 @@ if selected == 'ABOUT APP':
     st.image(img3, use_column_width=True)
     st.markdown("#### **This is a Crop Detection App. This app is made using Streamlit, Keras and Python. This app is made for the purpose of detecting the crop based on the image of the crop. This app is made for the final year project.**")
     st.markdown('---')
-    st.title("🎇HOW TO USE🎇")
+    st.title("HOW TO USE👇")
     c1, c2 = st.columns(2)
     with c1:
         st.markdown("#### **1. Go to the sidebar.**")
@@ -50,7 +50,7 @@ if selected == 'ABOUT APP':
         st.markdown("#### **4. The detected crop's name will be displayed.**")
     with c2:
         img4 = Image.open('use.jpeg')
-        st.image(img4, width=100)
+        st.image(img4, width=150)
     st.markdown('---')
 
 
@@ -62,30 +62,33 @@ if selected == 'MEMBERS':
         st.markdown("#### **Um-E-Habiba (GL)**")
         st.markdown("#### **18SW78**")
         img1 = Image.open('Habiba.jpeg')
-        st.image(img1, width=200)
+        st.image(img1, width=270)
+        st.markdown('##### [![LinkedIn](https://brand.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg)](https://www.linkedin.com/in/ume-habiba-712373244/)')
         
     with col2:
         st.markdown("#### **Areej jawed**")
         st.markdown("#### **18SW101**")
         img2 = Image.open('Areej.jpeg')
-        st.image(img2, width=200)
+        st.image(img2, width=270)
+        st.markdown('##### [![LinkedIn](https://brand.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg)](https://www.linkedin.com/in/areej-jawed-9b4694252/)')
         
     with col3:
-        st.markdown("#### **Ansharah Siddique**")
+        st.markdown("#### **Ansharah Siddiqui**")
         st.markdown("#### **18SW132**")
         img3 = Image.open('Ansharah.jpeg')
-        st.image(img3, width=200)
+        st.image(img3, width=270)
+        st.markdown('##### [![LinkedIn](https://brand.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg)](https://www.linkedin.com/in/anshrah-siddiqui-47ba13253/)')
         
     st.markdown('---')
 
 
 if selected == 'DETAIL':
-    st.title("Know About The Crops")
+    st.title("Know About The Crops📝")
     st.markdown('---')
     st.markdown("## **Select the crop**")
     option= st.selectbox('', ('Wheat', 'Rice','Jute','Sugarcane','Maize'))
     if option=='Wheat':
-        st.title("Wheat")
+        st.title("Wheat🌾")
         wheat = Image.open('wheat.jpeg')
         st.image(wheat, use_column_width= True)
         st.markdown("#### **Wheat is one of the oldest and most important of the cereal crops. Of the thousands of varieties known, the most important are common wheat, used to make bread cake, crackers, cookies, pastries, and flours. Additionally, some wheat is used by industry for the production of starch, paste, malt, dextrose, gluten, alcohol, and other products.**")
@@ -98,7 +101,7 @@ if selected == 'DETAIL':
 
 
     elif option=='Rice':
-        st.title("Rice")
+        st.title("Rice🌾")
         rice = Image.open('rice.jpg')
         st.image(rice, use_column_width= True)
         st.markdown("#### **Rice is the seed of the grass species Oryza sativa (Asian rice) or less commonly Oryza glaberrima (African rice). The name wild rice is usually used for species of the genera Zizania and Porteresia, both wild and domesticated, although the term may also be used for primitive or uncultivated varieties of Oryza. As a cereal grain, domesticated rice is the most widely consumed staple food for over half of the world's human population,[Liu 1] especially in Asia and Africa. It is the agricultural commodity with the third-highest worldwide production, after sugarcane and maize.**")
@@ -109,7 +112,7 @@ if selected == 'DETAIL':
 
 
     elif option=='Jute':
-        st.title("Jute")
+        st.title("Jute🌾")
         jute = Image.open('jute.jpg')
         st.image(jute, use_column_width= True)
         st.markdown("#### **Jute is one of the most important natural fibers after cotton in terms of cultivation and usage. Cultivation is dependent on the climate, season, and soil. Almost 85% of the world's jute cultivation is concentrated in the Ganges Delta. This fertile geographic region is shared by both Bangladesh and India (mainly West Bengal). China also has a dominating place in jute cultivation. On a smaller scale, Thailand, Myanmar (Burma), Pakistan, Nepal, and Bhutan also cultivate jute.**")
@@ -119,7 +122,7 @@ if selected == 'DETAIL':
         st.markdown("#### **The industry depends entirely on imported raw jute procured from Bangladesh as its exclusive source for raw material. Jute is a Kharif crop. It has a cultivation period of 120-150 days. It is sown from March to May and harvested from June to September. During FY21, Pakistan’s raw jute imports stood at PKR 8,491mln as compared to PKR 4,852mln in FY20, an increase of 75%. The increase came on the back of significantly higher import prices due to decline in raw jute production in Bangladesh.**")
         
     elif option=='Sugarcane':
-        st.title("Sugarcane")
+        st.title("Sugarcane🌾")
         sugarcane = Image.open('sugarcane.jpg')
         st.image(sugarcane, use_column_width= True)
         st.markdown("#### **Sugarcane, (Saccharum officinarum), perennial grass of the family Poaceae, primarily cultivated for its juice from which sugar is processed. Most of the world’s sugarcane is grown in subtropical and tropical areas. The plant is also grown for biofuel production, especially in Brazil, as the canes can be used directly to produce ethyl alcohol (ethanol).**")
@@ -131,7 +134,7 @@ if selected == 'DETAIL':
         st.markdown("#### **In order to increase the production of sugar cane several steps were taken by the Govt. and the sugar mill association to help formers.**")
 
     elif option=='Maize':
-        st.title("Maize")
+        st.title("Maize🌾")
         maize = Image.open('maize.jpeg')
         st.image(maize, use_column_width= True)
         st.markdown("#### **Maize has become a staple food in many parts of the world, with the total production of maize surpassing that of wheat or rice. In addition to being consumed directly by humans (often in the form of masa), maize is also used for corn ethanol, animal feed and other maize products, such as corn starch and corn syrup. The six major types of maize are dent corn, flint corn, pod corn, popcorn, flour corn, and sweet corn.Sugar-rich varieties called sweet corn are usually grown for human consumption as kernels, while field corn varieties are used for animal feed, various corn-based human food uses (including grinding into cornmeal or masa, pressing into corn oil, fermentation and distillation into alcoholic beverages like bourbon whiskey), and as feedstocks for the chemical industry. Maize is also used in making ethanol and other biofuels.**")
@@ -153,10 +156,10 @@ if selected == 'DETAIL':
 
 
 if selected == 'DETECTION':
-    st.title("🎇DETECTION🎇")
+    st.title("DETECTION🔍")
     st.set_option('deprecation.showfileUploaderEncoding', False)
     
-    st.markdown("## **Upload the image of the crop**")
+    st.markdown("## **Upload the image of the crop 📎**")
     file_in = st.file_uploader("", type=["jpg", "png", "jpeg"])
     model_final = load_model('crop_inception.h5')
 
